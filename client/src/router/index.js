@@ -2,6 +2,7 @@ import HomePage from '../pages/home'
 import ManagerPage from '../pages/manager'
 import StatisticsPage from '../pages/statistics'
 import TemplatesPage from '../pages/templates'
+import EditorPage from '../pages/editor'
 import AboutPage from '../pages/about'
 import DocumentPage from '../pages/document'
 import NotFoundPage from '../pages/not-found'
@@ -21,6 +22,10 @@ const routes = [{
 }, {
   path: '/manager/templates',
   component: TemplatesPage,
+  exact: false
+}, {
+  path: '/editor/:id',
+  component: EditorPage,
   exact: false
 }, {
   path: '/document',
