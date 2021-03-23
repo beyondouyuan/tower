@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 
-import styles from './header.module.scss'
+import styles from './style.module.scss'
 
 const menus = [{
   title: '文档中心',

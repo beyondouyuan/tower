@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 
-import styles from './layout.module.scss'
+import styles from './style.module.scss'
 
 class PageLayout extends Component {
 

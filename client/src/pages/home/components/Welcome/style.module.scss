@@ -1,10 +1,12 @@
+@import 'src/styles/variables/default.scss';
+
 .welcome-container {
   width: 100%;
 
   &__body {
     width: 100%;
     font-size: 36px;
-    color: rgba(250, 173, 20, 1);
+    color: $primary;
     text-align: center;
   }
 }

@@ -1,10 +1,12 @@
+@import 'src/styles/variables/default.scss';
+
 .create-container {
   width: 100%;
 
   &__body {
     width: 100%;
     font-size: 36px;
-    color: rgba(250, 173, 20, 1);
+    color: $primary;
     text-align: center;
 
     .btn {
@@ -16,10 +18,10 @@
       box-sizing: border-box;
       border-radius: 4px;
       cursor: pointer;
-      background-color: rgba(250, 173, 20, 1);
+      background-color: $primary;
 
       &:hover {
-        background-color: rgba(250, 173, 20, .85);
+        background-color: rgba($color: $primary, $alpha: .85);
       }
     }
   }

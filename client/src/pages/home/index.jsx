@@ -4,7 +4,7 @@ import { PageLayout } from '@Layout'
 import Welcome from './components/Welcome'
 import Create from './components/Create'
 
-import styles from './home.module.scss'
+import styles from './style.module.scss'
 
 function Home () {
   return (

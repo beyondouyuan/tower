@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import { withRouter } from 'react-router-dom'
 
-import styles from './sidebar.module.scss'
+import styles from './style.module.scss'
 
 const menus = [{
   title: '我的作品',
