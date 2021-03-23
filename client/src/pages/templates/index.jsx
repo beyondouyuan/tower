@@ -1,12 +1,12 @@
 import React from 'react'
 import { PageLayout } from '@Layout'
 
-function Manager () {
+function Templates () {
   return (
     <PageLayout>
-      <div className='manager-page__container'>我的作品</div>
+      <div className='templates-page__container'>模板中心</div>
     </PageLayout>
   )
 }
 
-export default Manager
+export default Templates

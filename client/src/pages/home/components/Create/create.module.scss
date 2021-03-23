@@ -1,0 +1,26 @@
+.create-container {
+  width: 100%;
+
+  &__body {
+    width: 100%;
+    font-size: 36px;
+    color: rgba(250, 173, 20, 1);
+    text-align: center;
+
+    .btn {
+      width: 150px;
+      margin: 20px auto;
+      font-size: 24px;
+      color: #FFFFFF;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: rgba(250, 173, 20, 1);
+
+      &:hover {
+        background-color: rgba(250, 173, 20, .85);
+      }
+    }
+  }
+}
