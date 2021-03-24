@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import styles from './style.module.scss'
 
@@ -21,13 +21,19 @@ const menus = [{
   trigger: 'hover'
 }]
 
-function Header (props) {
+function Header () {
+  const history = useHistory()
+
+  function handleClick (path) {
+    history.push(path)
+  }
+
   return (
     <div className={styles['layout-header__container']}>
       <div
         className={styles['logo-box']}
         onClick={() => {
-          props.history.push('/')
+          handleClick('/')
         }}
       >
         通天塔
@@ -42,7 +48,7 @@ function Header (props) {
                 onClick={() => {
                   if (item.trigger !== 'click') return
                   if (item.site) {
-                    props.history.push(item.path)
+                    handleClick(item.path)
                   } else {
                     window.open(item.path, '_blank')
                   }
@@ -58,4 +64,4 @@ function Header (props) {
   )
 }
 
-export default withRouter(Header)
+export default Header

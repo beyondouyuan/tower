@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react'
+import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { PageLayout } from '@Layout'
 
 import Welcome from './components/Welcome'
@@ -6,13 +7,15 @@ import Create from './components/Create'
 
 import styles from './style.module.scss'
 
-function Home (props) {
+function Home () {
 
-  const handleCreate = useCallback(() => {
-    props.history.push({
+  const history = useHistory()
+
+  function handleCreate () {
+    history.push({
       pathname: `/editor/${Date.now()}`
     })
-  }, [props])
+  }
 
   return (
     <PageLayout>

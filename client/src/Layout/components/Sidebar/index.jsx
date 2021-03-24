@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import { withRouter } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import styles from './style.module.scss'
 
@@ -20,12 +20,18 @@ const menus = [{
 }]
 
 function Sidebar (props) {
+  const history = useHistory()
+
+  function handleClick (path) {
+    history.push(path)
+  }
+
   return (
     <div className={styles['layout-sidebar__container']}>
       <div className={styles['sidebar-navigation']}>
         {
           menus.map(item => {
-            const active = (item.path === props.match.path)
+            const active = (item.path === history.location.pathname)
             const itemClass = classNames(styles['sidebar-navigation__item'], {
               [styles['active']]: active
             })
@@ -34,7 +40,7 @@ function Sidebar (props) {
                 key={item.path}
                 className={itemClass}
                 onClick={() => {
-                  props.history.push(item.path)
+                  handleClick(item.path)
                 }}
               >
                 {item.title}
@@ -47,4 +53,4 @@ function Sidebar (props) {
   )
 }
 
-export default withRouter(Sidebar)
+export default Sidebar
